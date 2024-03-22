@@ -22,5 +22,6 @@ abstract class  LocaleKeys {
   static const flutter = 'flutter';
   static const developer = 'developer';
   static const latest = 'latest';
+  static const aboutMeText = 'aboutMeText';
 
 }

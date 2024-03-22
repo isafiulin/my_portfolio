@@ -6,7 +6,7 @@
     "home": "Home",
     "projects": "Projects",
     "followMe": "Follow Me",
-    "myPersonalPortfolio": "My Personal Portfolio",
+    "myPersonalPortfolio": "My Portfolio",
     "meFirst": "I'm capable of creating excellent mobile apps, handling",
     "meSecond": "every step from ",
     "meThird": "concept to deployment.",
@@ -19,5 +19,6 @@
     "github": "GitHub",
     "flutter": "Flutter ",
     "developer": "Developer ",
-    "latest": "Latest"
+    "latest": "Latest",
+    "aboutMeText": "Experienced mobile developer with more than 9 years in the field of information technology. Having started my career as a system and network administrator, I have built a strong foundation in IT by working on varied and complex projects. Over the past few years, I have successfully redirected my focus to developing mobile applications using the Flutter framework. My experience also includes responsibility for technical leadership and project management, which has enriched my skills in team and project management. My experience allows me to make complex decisions and make a significant contribution to the development of projects."
 }

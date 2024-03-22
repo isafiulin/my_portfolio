@@ -10,12 +10,11 @@ class TopNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawerEnableOpenDragGesture: false,
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Spacer(),
-
-          // if(Responsive.isLargeMobile(context)) MenuButton(),
           const Spacer(
             flex: 2,
           ),

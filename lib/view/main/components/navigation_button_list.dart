@@ -9,36 +9,33 @@ class NavigationButtonList extends StatelessWidget {
   const NavigationButtonList({super.key});
   @override
   Widget build(BuildContext context) {
-    return TweenAnimationBuilder(
-      tween: Tween(begin: 0.0, end: 1.0),
-      duration: const Duration(milliseconds: 200),
-      builder: (context, value, child) {
-        return Transform.scale(
-          scale: value,
-          child: Row(
-            children: [
-              NavigationTextButton(
-                  onTap: () {
-                    controller.animateToPage(0,
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
-                  },
-                  text: LocaleKeys.home),
-              if (!Responsive.isLargeMobile(context))
-                NavigationTextButton(onTap: () {}, text: LocaleKeys.aboutMe),
-              NavigationTextButton(
-                  onTap: () {
-                    controller.animateToPage(1,
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
-                  },
-                  text: LocaleKeys.projects),
-              // NavigationTextButton(onTap: () {controller.animateToPage(2, duration: const Duration(milliseconds: 500), curve: Curves.easeIn);}, text: 'Certifications'),
-              // NavigationTextButton(onTap: () {}, text: 'Achievements'),
-            ],
-          ),
-        );
-      },
+    return Row(
+      children: [
+        NavigationTextButton(
+            onTap: () {
+              controller.animateToPage(0,
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeIn);
+            },
+            text: LocaleKeys.home),
+        if (Responsive.isLargeMobile(context) || Responsive.isMobile(context))
+          NavigationTextButton(
+              onTap: () {
+                controller.animateToPage(1,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeIn);
+              },
+              text: LocaleKeys.aboutMe),
+        NavigationTextButton(
+            onTap: () {
+              controller.animateToPage(Responsive.isMobile(context) ? 2 : 1,
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeIn);
+            },
+            text: LocaleKeys.projects),
+        // NavigationTextButton(onTap: () {controller.animateToPage(2, duration: const Duration(milliseconds: 500), curve: Curves.easeIn);}, text: 'Certifications'),
+        // NavigationTextButton(onTap: () {}, text: 'Achievements'),
+      ],
     );
   }
 }
